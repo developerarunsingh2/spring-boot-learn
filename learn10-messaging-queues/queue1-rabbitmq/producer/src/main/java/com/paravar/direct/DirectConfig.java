@@ -34,7 +34,7 @@ public class DirectConfig {
 
     @Bean
     public Binding bindingError() {
-        return BindingBuilder.bind(directQueueError()).to(directExchange()).with(appProperties.direct().infoQueueKey());
+        return BindingBuilder.bind(directQueueError()).to(directExchange()).with(appProperties.direct().errorQueueKey());
     }
 
 }

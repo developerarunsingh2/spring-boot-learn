@@ -11,7 +11,7 @@ public class UserController {
 
     /*
 
-    // if we are not using default jwt converter...then the AuthenticationPrincipal is Jwt
+    // if we are using default jwt converter...then the AuthenticationPrincipal is Jwt
     // and the Authentication is JwtAuthentication
 
     @GetMapping("/me")

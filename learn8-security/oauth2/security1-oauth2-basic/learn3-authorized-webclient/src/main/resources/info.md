@@ -75,3 +75,13 @@ security:
       - OAuth2AuthorizedClientRepository
 
 - OAuth2AuthorizedClientService internally user AuthorizedClientManager
+#### IMPs
+- default OAuth2AuthorizedClientService is `InMemoryOAuth2AuthorizedClientService`
+   - which stores all the authorized clients in memory
+   - we can implement `JdbcOAuth2AuthorizedClientService` or Custom to store the authorized clients in db
+  
+- Spring creates `OAuth2AuthorizedClient` per authentication ( per clientRegistrationId )
+   - eg: clientId, principalName
+     - ("github", "ravinder")
+     - ("google", "ravinder")
+     - ("github", "admin")

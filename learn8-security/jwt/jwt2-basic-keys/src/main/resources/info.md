@@ -6,7 +6,7 @@
     
   - RSA / ESA algorithms are used for asymmetric encryption
   
-  - Note: for asymmetric encryption we use MAC(HMAC) algorithms
+  - Note: for symmetric encryption we use MAC(HMAC) algorithms
 
 - We use asymmetric encryption when the authorization server & resource server are different
 

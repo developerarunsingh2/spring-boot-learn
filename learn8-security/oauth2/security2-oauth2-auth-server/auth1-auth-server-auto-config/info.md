@@ -3,11 +3,12 @@
 1. Visit client app secure endpoints 
     - this will redirect to login page
    
-2. if we click on our auth-server that will redirect to 
-    - client app's log-in url: http://127.0.0.1:8080/oauth2/authorization/login-client
+2. login pages shows all the registered oauth providers
+    - if we click on our auth-server(`spring`) that will redirect to 
+      - client app's log-in url(redirect-uri): http://127.0.0.1:8080/oauth2/authorization/login-client
    
 3. client app's log-in url will redirect to
-   - oauth server log-in url: http://localhost:7000/oauth2/authorize?response_type=code&client_id=login-client&scope=openid%20profile&state=PMC7XNZ81toTWlgYqxliFd1LQndtV8Cl_6oZ025ORwo%3D&redirect_uri=http://127.0.0.1:8080/login/oauth2/code/login-client&nonce=kt0RemFN48tzE1vKWjvOUBqcycKxs1YCmPblE3JNIjA
+   - provider's(oauth server) log-in ur(authorization-uri)l: http://localhost:7000/oauth2/authorize?response_type=code&client_id=login-client&scope=openid%20profile&state=PMC7XNZ81toTWlgYqxliFd1LQndtV8Cl_6oZ025ORwo%3D&redirect_uri=http://127.0.0.1:8080/login/oauth2/code/login-client&nonce=kt0RemFN48tzE1vKWjvOUBqcycKxs1YCmPblE3JNIjA
    -  this will redirect to oauth server's log-in screen ( if not logged in )
    -  Note:-
        - hare `state=asdd` is csrf token

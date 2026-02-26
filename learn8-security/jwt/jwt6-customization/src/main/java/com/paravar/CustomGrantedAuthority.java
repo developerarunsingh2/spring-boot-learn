@@ -1,24 +1,16 @@
 package com.paravar;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.security.core.GrantedAuthority;
 
-@RequiredArgsConstructor
-@Getter
-@EqualsAndHashCode
-public class CustomGrantedAuthority implements GrantedAuthority {
-    private final String scope;
-    private final String authority;
-
+public record CustomGrantedAuthority(String scope, String authority) implements GrantedAuthority {
     @Override
     public String getAuthority() {
         return scope + ":" + authority;
     }
 
     @Override
-    public String toString(){
-        return  getAuthority();
+    public String toString() {
+        return getAuthority();
     }
 }
